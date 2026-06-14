@@ -18,6 +18,12 @@ files.forEach(file => {
     // Replace footer
     content = content.replace(/(<!-- ht-footer-area-start -->[\s\S]*?<!-- ht-footer-area-end -->)/, footer);
 
+    // Inject responsive-fix.css before </head> if not already present
+    const responsiveLink = '    <!--<< Responsive Fix >>\u002d\u002d>\n    <link rel="stylesheet" href="assets/css/responsive-fix.css">\n';
+    if (!content.includes('responsive-fix.css')) {
+        content = content.replace('</head>', responsiveLink + '</head>');
+    }
+
     if (content !== originalContent) {
         fs.writeFileSync(file, content, 'utf8');
         console.log(`Updated ${file}`);

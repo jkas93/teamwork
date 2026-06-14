@@ -1,0 +1,179 @@
+/* ============================================
+   RESPONSIVE FIXES - Teamwork Consultoría
+   Correcciones de desbordamiento en móvil
+   ============================================ */
+
+/* ---- Prevenir desbordamiento horizontal global ---- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ---- TOP HEADER: Ocultar en móvil pequeño ---- */
+@media (max-width: 575px) {
+  .ht-top-header {
+    display: none;
+  }
+}
+
+/* ---- HERO AREA: Ajustar padding y layout ---- */
+@media (max-width: 767px) {
+  .ht-hero-area {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .ht-hero-content .desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .ht-hero-area {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+}
+
+/* ---- H1: Tamaños más manejables en móvil ---- */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 56px !important;
+    letter-spacing: -1px;
+  }
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 46px !important;
+    letter-spacing: -0.5px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 38px !important;
+  }
+}
+
+/* ---- HERO IMAGE: Posicionamiento responsivo ---- */
+@media (max-width: 992px) {
+  .ht-hero-img {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .ht-hero-img img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  .ht-hero-counter {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+  }
+  .ht-hero-counter .count-card,
+  .ht-hero-counter .count-card-2 {
+    position: relative;
+    right: unset;
+    left: unset;
+    bottom: unset;
+    max-width: 180px;
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .ht-hero-img img {
+    max-width: 100%;
+  }
+  .ht-hero-counter .count-card,
+  .ht-hero-counter .count-card-2 {
+    max-width: 48%;
+    padding: 12px 14px;
+  }
+}
+
+/* ---- SERVICIOS: Tarjetas a full ancho en móvil ---- */
+@media (max-width: 575px) {
+  .ht-services-items {
+    padding: 20px;
+  }
+}
+
+/* ---- STATS: Columna en lugar de fila ---- */
+@media (max-width: 767px) {
+  .ht-stats-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/* ---- ABOUT: Reducir gap ---- */
+@media (max-width: 575px) {
+  .ht-about-wrapper .row {
+    gap: 20px;
+  }
+}
+
+/* ---- CONTACT FORM: Padding interno en móvil ---- */
+@media (max-width: 575px) {
+  .ht-contact-form-wrapper,
+  .ht-contact-info-wrapper {
+    padding: 20px 15px;
+  }
+  input[type="email"],
+  input[type="text"],
+  input[type="tel"] {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* ---- OFFCANVAS MENU: Asegurar anchura correcta ---- */
+.ht-offcanvas {
+  max-width: 320px;
+  width: 100%;
+}
+
+/* ---- FOOTER: Columna en móvil ---- */
+@media (max-width: 575px) {
+  .ht-footer-top-wrapper {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  .ht-footer-widget {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ht-footer-copyright {
+    text-align: center;
+  }
+}
+
+/* ---- SECTIONS: Padding general en móvil ---- */
+@media (max-width: 575px) {
+  .section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .pt-130 {
+    padding-top: 60px;
+  }
+}
+
+/* ---- CONTAINERS: Sin padding lateral excesivo ---- */
+@media (max-width: 575px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
