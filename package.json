@@ -1,0 +1,11 @@
+{
+  "name": "teamwork-consultoria",
+  "version": "1.0.0",
+  "description": "Website for Teamwork Consultoría",
+  "scripts": {
+    "build": "node build.js",
+    "start": "npx serve"
+  },
+  "author": "Teamwork Consultoría",
+  "license": "ISC"
+}

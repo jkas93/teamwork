@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Archivos de documentación internos
+*.docx
+*.md
+!README.md
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+npm-debug.log*
