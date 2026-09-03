@@ -484,6 +484,75 @@ textarea:focus-visible,
   border-color: var(--ht-border-color);
 }
 
+/* Selector "Servicio de interés": coherente con el ancho y estilo del formulario. */
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select {
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  clear: none;
+  color: #2c2b2b;
+  float: none;
+  font-size: 16px;
+  height: 62px;
+  line-height: 32px;
+  margin-bottom: 24px;
+  padding: 14px 48px 14px 15px;
+  width: 100%;
+}
+
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select:hover,
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select.open,
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select:focus {
+  border-color: var(--ht-border-color);
+}
+
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select .current {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select .list {
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  box-shadow: 0 12px 28px rgba(19, 19, 19, 0.14);
+  left: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  right: 0;
+  width: 100%;
+}
+
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select .option {
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid #ededed;
+  color: #2c2b2b;
+  font-size: 16px;
+  line-height: 1.35;
+  min-height: 48px;
+  padding: 13px 16px;
+  white-space: normal;
+}
+
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select .option:last-child {
+  border-bottom: 0;
+}
+
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select .option:hover,
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select .option.focus,
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select .option.selected.focus {
+  background: #f3f3f3;
+  color: var(--ht-theme-color-2);
+}
+
+.ht-contact-form-area .tw-contact-form #servicio + .nice-select .option.selected {
+  color: var(--ht-theme-color-2);
+  font-weight: 700;
+}
+
 .tw-contact-form button[disabled] {
   cursor: not-allowed;
   filter: grayscale(0.4);
