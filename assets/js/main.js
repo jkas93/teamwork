@@ -119,6 +119,18 @@
       $('select').niceSelect();
     }
 
+    // Preselect the service requested from a service CTA.
+    var requestedService = new URLSearchParams(window.location.search).get('servicio');
+    var allowedServices = ['general', 'formacion', 'outdoor', 'consultoria', 'one-to-one'];
+    var $serviceSelect = $('#servicio');
+
+    if ($serviceSelect.length && allowedServices.indexOf(requestedService) !== -1) {
+      $serviceSelect.val(requestedService);
+      if ($.fn.niceSelect) {
+        $serviceSelect.niceSelect('update');
+      }
+    }
+
     // Brand Slider
     if ($('.ht-brand-slider').length > 0) {
       var swiper = new Swiper('.ht-brand-slider', {
