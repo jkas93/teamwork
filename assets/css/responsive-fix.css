@@ -347,6 +347,12 @@ textarea:focus-visible,
   line-height: 1.75;
 }
 
+.tw-service-detail > p + p,
+.tw-service-intro p + p,
+.tw-service-copy p + p {
+  margin-top: 15px;
+}
+
 .tw-training-grid {
   display: grid;
   gap: 18px;
@@ -357,6 +363,9 @@ textarea:focus-visible,
 .tw-training-item {
   background: var(--ht-theme-color-5);
   border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   padding: 26px;
 }
 
@@ -371,13 +380,28 @@ textarea:focus-visible,
 .tw-training-item h3 {
   font-size: 21px;
   line-height: 1.25;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  min-height: 2.5em;
 }
 
 .tw-training-item p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.65;
   margin-bottom: 0;
+}
+
+.tw-training-copy {
+  flex: 1;
+}
+
+.tw-training-copy p + p {
+  margin-top: 15px;
+}
+
+.tw-training-item .ht-btn {
+  align-self: flex-start;
+  line-height: 1.35;
+  padding: 18px 22px;
 }
 
 .tw-service-compact {
@@ -388,6 +412,10 @@ textarea:focus-visible,
 .tw-service-compact .ht-btn {
   align-self: flex-start;
   margin-top: auto;
+}
+
+.tw-service-compact > p:last-of-type {
+  margin-bottom: 20px;
 }
 
 .tw-service-horizontal {
@@ -731,5 +759,176 @@ textarea:focus-visible,
   .ht-contact-form-area .tw-contact-form select,
   .ht-contact-form-area .tw-contact-form textarea {
     font-size: 16px;
+  }
+}
+
+/* Observaciones del documento: jerarquía, espacios y referencias visuales. */
+.ht-btn {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.ht-about-content > .ht-btn,
+.tw-founder-content > .ht-btn {
+  margin-top: 20px;
+}
+
+.ht-services-items .title {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  overflow: visible;
+}
+
+.ht-services-items .title img {
+  flex: 0 0 21px;
+  height: 21px;
+  left: auto;
+  opacity: 1;
+  position: static;
+  top: auto;
+  transition: transform 0.2s ease;
+  width: 21px;
+  z-index: auto;
+}
+
+.ht-services-items a:hover .title img,
+.ht-services-items a:focus-visible .title img {
+  transform: translate(3px, -3px);
+}
+
+.tw-stats-two .ht-stats-items {
+  min-width: 0;
+  padding: 32px 20px;
+}
+
+.tw-stats-two .number {
+  font-size: clamp(28px, 3.1vw, 44px);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.tw-stats-two .number::after {
+  content: none;
+}
+
+.tw-stats-two h4 {
+  font-size: 19px;
+  line-height: 1.4;
+  margin-top: 16px;
+}
+
+.tw-stats-two p {
+  margin-top: 14px;
+}
+
+.ht-process-item .title {
+  margin-bottom: 18px;
+}
+
+.ht-process-item p {
+  margin-top: 0;
+}
+
+.tw-methodology .ht-process-wrapper > .row {
+  column-gap: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-inline: 0;
+  row-gap: 36px;
+}
+
+.tw-methodology .ht-process-wrapper > .row > div {
+  min-width: 0;
+  padding-inline: 0;
+  width: auto;
+}
+
+.tw-methodology .ht-process-item .title {
+  align-items: flex-end;
+  display: flex;
+  font-size: 28px;
+  justify-content: center;
+  line-height: 1.3;
+  min-height: 2.6em;
+}
+
+.tw-certifications {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.tw-certification-logo {
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  height: 88px;
+  justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
+  width: 220px;
+}
+
+/* Se conservan las imágenes entregadas; el encuadre oculta bordes de la captura. */
+.tw-certification-icf img {
+  clip-path: inset(16% 0 0);
+  height: auto;
+  width: 210px;
+}
+
+.tw-certification-newfield img {
+  height: 88px;
+  object-fit: cover;
+  object-position: center;
+  width: 220px;
+}
+
+.ht-contact-form-area .tw-contact-form #capacitacion {
+  background: #f6f6f6;
+  color: #2c2b2b;
+  height: auto;
+  line-height: 1.5;
+  min-height: 100px;
+  resize: none;
+}
+
+@media (max-width: 991px) {
+  .tw-methodology .ht-process-wrapper > .row {
+    gap: 36px 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ht-process-item .title {
+    margin-top: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tw-training-item h3,
+  .tw-methodology .ht-process-item .title {
+    min-height: 0;
+  }
+
+  .tw-methodology .ht-process-wrapper > .row {
+    grid-template-columns: 1fr;
+  }
+
+  .tw-stats-two .number {
+    font-size: clamp(28px, 5.5vw, 36px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ht-services-items .title img {
+    transition: none;
   }
 }

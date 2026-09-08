@@ -119,15 +119,39 @@
       $('select').niceSelect();
     }
 
-    // Preselect the service requested from a service CTA.
-    var requestedService = new URLSearchParams(window.location.search).get('servicio');
+      // Conserva el servicio y la capacitación elegidos al llegar desde una tarjeta.
+      var contactParams = new URLSearchParams(window.location.search);
+      var requestedService = contactParams.get('servicio');
     var allowedServices = ['general', 'formacion', 'outdoor', 'consultoria', 'one-to-one'];
     var $serviceSelect = $('#servicio');
 
-    if ($serviceSelect.length && allowedServices.indexOf(requestedService) !== -1) {
+      if ($serviceSelect.length && allowedServices.indexOf(requestedService) !== -1) {
       $serviceSelect.val(requestedService);
       if ($.fn.niceSelect) {
         $serviceSelect.niceSelect('update');
+      }
+
+      var trainingOptions = {
+        'liderazgo': 'Liderazgo personal y organizacional',
+        'trabajo-en-equipo': 'Trabajo en equipo',
+        'comunicacion': 'Comunicación efectiva',
+        'conflictos': 'Resolución de conflictos',
+        'atencion-al-publico': 'Atención al público y vocación de servicio',
+        'transformacion': 'Transformación organizacional'
+      };
+      var requestedTraining = contactParams.get('capacitacion');
+      var trainingName = Object.prototype.hasOwnProperty.call(trainingOptions, requestedTraining)
+        ? trainingOptions[requestedTraining] : '';
+
+      function updateTrainingContext() {
+        var showTraining = $serviceSelect.val() === 'formacion' && trainingName !== '';
+        $('#capacitacion-contexto').prop('hidden', !showTraining);
+        $('#capacitacion').val(showTraining ? trainingName : '').prop('disabled', !showTraining);
+      }
+
+      if ($serviceSelect.length) {
+        updateTrainingContext();
+        $serviceSelect.on('change', updateTrainingContext);
       }
     }
 
