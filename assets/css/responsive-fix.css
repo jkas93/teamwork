@@ -581,10 +581,35 @@ textarea:focus-visible,
   font-weight: 700;
 }
 
+.tw-contact-form button.ht-btn {
+  cursor: pointer;
+}
+
 .tw-contact-form button[disabled] {
   cursor: not-allowed;
-  filter: grayscale(0.4);
-  opacity: 0.7;
+  filter: none;
+  opacity: 1;
+}
+
+/* Contacto: iconos lineales y fondo neutro, como las tarjetas de servicios. */
+.ht-contact-info-area .contact-info-item .icon {
+  background: var(--ht-theme-color-3);
+  border-radius: 12px;
+}
+
+.ht-contact-info-area .contact-info-item .icon img {
+  display: block;
+  height: 44px;
+  width: 44px;
+}
+
+.ht-contact-info-area .contact-info-item:hover .icon,
+.ht-contact-info-area .contact-info-item:focus-within .icon {
+  background: var(--ht-theme-color-2);
+}
+
+.ht-contact-info-area .contact-info-item:focus-within .icon img {
+  filter: brightness(0) invert(1);
 }
 
 .tw-form-note {
