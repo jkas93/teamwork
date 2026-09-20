@@ -957,3 +957,351 @@ textarea:focus-visible,
     transition: none;
   }
 }
+
+/* Logos originales del cliente, encuadrados sin alterar los PNG transparentes. */
+.ht-menu-logo .tw-brand-mark,
+.ht-offcanvas-logo.tw-brand-mark {
+  display: block;
+  flex: 0 0 220px;
+  height: 35px;
+  min-height: 35px;
+  overflow: hidden;
+  position: relative;
+  width: 220px;
+}
+
+.tw-brand-mark img {
+  height: 76px !important;
+  left: -36px;
+  max-width: none !important;
+  position: absolute;
+  top: -21px;
+  width: 284px !important;
+}
+
+.ht-footer-top-left .tw-footer-brand {
+  background: #fff;
+  border-radius: 12px;
+  display: block;
+  height: 60px;
+  min-height: 60px;
+  overflow: hidden;
+  position: relative;
+  width: 246px;
+}
+
+.tw-footer-brand img {
+  height: 80px !important;
+  left: -42px;
+  max-width: none !important;
+  position: absolute;
+  top: -10px;
+  width: 300px !important;
+}
+
+.tw-footer-credit {
+  color: rgba(255, 255, 255, .72);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.ht-footer-widget-items .link-list li {
+  color: var(--ht-white);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 26px;
+}
+
+/* Los servicios muestran un resumen; cada detalle conserva su contenido completo. */
+.tw-service-detail {
+  height: auto;
+  padding: 28px 34px;
+}
+
+.tw-service-summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.tw-service-summary::-webkit-details-marker {
+  display: none;
+}
+
+.tw-service-summary .tw-service-heading {
+  align-items: center;
+  flex: 1 1 auto;
+  margin: 0;
+  min-width: 0;
+}
+
+.tw-service-summary .tw-service-heading h2 {
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.tw-service-summary .tw-service-toggle {
+  flex: 0 0 174px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.tw-service-summary:hover .tw-service-toggle,
+.tw-service-summary:focus-visible .tw-service-toggle {
+  color: #fff;
+}
+
+.tw-service-summary:hover .tw-service-toggle::before,
+.tw-service-summary:focus-visible .tw-service-toggle::before {
+  width: 100%;
+}
+
+.tw-service-summary:focus-visible {
+  border-radius: 8px;
+  outline: 3px solid var(--ht-theme-color-2);
+  outline-offset: 6px;
+}
+
+.tw-service-detail .tw-toggle-less,
+.tw-service-detail[open] .tw-toggle-more {
+  display: none;
+}
+
+.tw-service-detail[open] .tw-toggle-less {
+  display: inline;
+}
+
+.tw-service-body {
+  border-top: 1px solid #e8e8e8;
+  margin-top: 26px;
+  padding-top: 28px;
+}
+
+.tw-service-body > p {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.tw-service-body > p + p {
+  margin-top: 15px;
+}
+
+.tw-service-body > .ht-btn {
+  margin-top: 20px;
+}
+
+.tw-service-copy {
+  max-width: 100%;
+}
+
+/* La foto y el resumen de Nosotros terminan al mismo nivel en escritorio. */
+.tw-about-more {
+  margin-top: 18px;
+}
+
+.tw-about-more summary {
+  color: var(--ht-theme-color-2);
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.tw-about-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.tw-about-more .tw-about-less-label,
+.tw-about-more[open] .tw-about-more-label {
+  display: none;
+}
+
+.tw-about-more[open] .tw-about-less-label {
+  display: inline;
+}
+
+.tw-about-more summary:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid var(--ht-theme-color-2);
+  outline-offset: 4px;
+}
+
+.tw-about-more p {
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+.tw-identity .ht-process-shape {
+  display: none;
+}
+
+.tw-identity .ht-process-wrapper > .row {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  margin: 0;
+}
+
+.tw-identity .ht-process-wrapper > .row > div {
+  padding: 0;
+  width: 100%;
+}
+
+.tw-identity .ht-process-item.two {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 18px;
+  display: grid;
+  gap: 8px 32px;
+  grid-template-columns: 220px minmax(0, 1fr);
+  margin-top: 0;
+  padding: 28px 34px;
+  text-align: left;
+}
+
+.tw-identity .ht-process-item.two::before {
+  content: none;
+}
+
+.tw-identity .ht-process-item.two .step {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+}
+
+.tw-identity .ht-process-item.two .title {
+  grid-column: 1;
+  grid-row: 2;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.tw-identity .ht-process-item.two p {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  line-height: 1.7;
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  .ht-about-area .ht-about-wrapper > .row:has(.tw-about-more:not([open])) {
+    align-items: stretch !important;
+  }
+
+  .ht-about-area .ht-about-wrapper > .row:has(.tw-about-more:not([open])) .ht-about-img {
+    height: 100%;
+  }
+
+  .ht-about-area .ht-about-wrapper > .row:has(.tw-about-more:not([open])) .ht-about-img img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .ht-about-area .ht-about-wrapper > .row > div:last-child {
+    display: flex;
+  }
+
+  .ht-about-area .ht-about-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 767px) {
+  .tw-service-detail {
+    padding: 24px;
+  }
+
+  .tw-founder-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tw-founder-placeholder {
+    aspect-ratio: auto;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .tw-founder-content {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .tw-service-summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tw-service-summary .tw-service-toggle {
+    flex: 0 0 auto;
+    min-width: 160px;
+  }
+
+  .tw-identity .ht-process-item.two {
+    display: block;
+    padding: 26px;
+  }
+
+  .tw-identity .ht-process-item.two .title {
+    margin: 18px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .tw-service-detail {
+    padding: 22px 20px;
+  }
+
+  .tw-service-summary .tw-service-heading {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .tw-service-summary .tw-service-heading .icon {
+    flex-basis: 58px;
+    height: 58px;
+    margin: 0;
+    width: 58px;
+  }
+
+  .tw-service-summary .tw-service-heading .icon img {
+    height: 36px;
+    width: 36px;
+  }
+
+  .tw-service-summary .tw-service-heading h2 {
+    font-size: 27px;
+  }
+
+  .tw-service-summary .tw-service-toggle {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .ht-menu-logo .tw-brand-mark,
+  .ht-offcanvas-logo.tw-brand-mark {
+    flex-basis: 190px;
+    height: 32px;
+    min-height: 32px;
+    width: 190px;
+  }
+
+  .tw-brand-mark img {
+    height: 66px !important;
+    left: -31px;
+    top: -18px;
+    width: 246px !important;
+  }
+}
